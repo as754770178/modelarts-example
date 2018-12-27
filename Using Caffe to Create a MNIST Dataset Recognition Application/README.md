@@ -51,7 +51,7 @@
 1. train_url（训练输出路径）：模型输出OBS路径；在ModelArts平台中选中“训练输出位置”后，平台会自动添加train_url参数。
 2. data_url：数据集OBS路径；在ModelArts平台中选中“数据来源”后，平台会自动添加train_url参数。
 3. num_gpus：使用gpu数目；在ModelArts平台中选中“资源池”后，平台会根据资源池中GPU数目，自动添加num_gpus参数。
-4. data_path_suffix：数据集OBS路径的最后一级目录名称。
+4. data_path_suffix：代码目录的最后一级目录名称。例如：本案例中代码目录为'/obs-caffe/caffe_mnist/codes'，则data_path_suffix为'codes'。
 5. data_local_path：数据集在容器中的保存路径，执行训练前ModelArts平台会将数据集从OBS拷贝到容器中。
 6. model_local_path：训练模型在容器中的保存路径。训练过程需要先将模型保存到容器中，在训练结束以后可以调用’mox.file.copy_parallel‘将模型拷贝到OBS中。
 
